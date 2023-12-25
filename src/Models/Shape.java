@@ -9,7 +9,7 @@ public class Shape {
         this.points = points;
     }
 
-    public double calculatePerimeter() {
+    public double Perimeter() {
         double perimeter = 0.0;
         int size = points.size();
         for (int i = 0; i < size; i++) {
@@ -20,7 +20,7 @@ public class Shape {
         return perimeter;
     }
 
-    public double findLongestSide() {
+    public double LongestSide() {
         double longestSide = 0.0;
         int size = points.size();
         for (int i = 0; i < size; i++) {
@@ -34,7 +34,7 @@ public class Shape {
         return longestSide;
     }
 
-    public double findAverageSide() {
+    public double AverageSide() {
         double totalLength = calculatePerimeter();
         int sides = points.size();
         return totalLength / sides;
