@@ -9,7 +9,7 @@ public class point {
         this.y = y;
     }
 
-    public double distanceTo(point destination) {
+    public double distanceT(point destination) {
         double dx = this.x - destination.x;
         double dy = this.y - destination.y;
         return Math.sqrt(dx * dx + dy * dy);
