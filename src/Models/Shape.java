@@ -11,32 +11,26 @@ public class Shape {
 
     public double Perimeter() {
         double perimeter = 0.0;
-        int size = points.size();
-        for (int i = 0; i < size; i++) {
-            point currentPoint = points.get(i);
-            point nextPoint = points.get((i + 1) % size);
-            perimeter += currentPoint.distanceTo(nextPoint);
+        for (int i = 0; i < points.size(); i++) {
+            point curPoint = points.get(i);
+            point nextPoint = points.get((i + 1) % points.size());
+            perimeter += curPoint.distanceT(nextPoint);
         }
         return perimeter;
     }
 
-    public double LongestSide() {
+    public double longestSide() {
         double longestSide = 0.0;
-        int size = points.size();
-        for (int i = 0; i < size; i++) {
-            point currentPoint = points.get(i);
-            point nextPoint = points.get((i + 1) % size);
-            double distance = currentPoint.distanceTo(nextPoint);
-            if (distance > longestSide) {
-                longestSide = distance;
+        for (point point : points) {
+            for (point otherPoint : points) {
+                double distance = point.distanceT(otherPoint);
+                longestSide = Math.max(longestSide, distance);
             }
         }
         return longestSide;
     }
 
-    public double AverageSide() {
-        double totalLength = calculatePerimeter();
-        int sides = points.size();
-        return totalLength / sides;
+    public double averageSide() {
+        return Perimeter() / points.size();
     }
 }
