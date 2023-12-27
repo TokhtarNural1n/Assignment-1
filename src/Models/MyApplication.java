@@ -24,7 +24,7 @@ public class MyApplication {
         Shape shape = new Shape(points);
 
         System.out.println("Perimeter: " + shape.Perimeter());
-        System.out.println("Longest Side: " + shape.LongestSide());
-        System.out.println("Average Side: " + shape.AverageSide());
+        System.out.println("Longest Side: " + shape.longestSide());
+        System.out.println("Average Side: " + shape.averageSide());
     }
 }
